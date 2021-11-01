@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `folders` (
   `path` text NOT NULL,
   `created` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `folders`
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `notes` (
   `type` ENUM('text','list') NOT NULL DEFAULT 'text',
   `created` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `notes`
@@ -111,7 +111,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`id`),
   UNIQUE KEY `users.username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
