@@ -1,0 +1,546 @@
+{
+	"info": {
+		"_postman_id": "b0e8e57b-e02d-41eb-9ba8-9abf44edd94c",
+		"name": "Notes API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Notes",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://notesapi.ddev/api/notes",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "heading|ASC",
+							"disabled": true
+						},
+						{
+							"key": "filter",
+							"value": "folders|2",
+							"disabled": true
+						},
+						{
+							"key": "p",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Folders",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://notesapi.ddev/api/folders",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"folders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://notesapi.ddev/api/notes/28",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"notes",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Folder",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://notesapi.ddev/api/folders/9",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"folders",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "heading",
+							"value": "Some heading 19",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Some text 19",
+							"type": "text"
+						},
+						{
+							"key": "private",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "fid",
+							"value": "5",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://notesapi.ddev/api/notes",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Folder",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uid",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "folder11",
+							"type": "text"
+						},
+						{
+							"key": "path",
+							"value": "/folder11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://notesapi.ddev/api/folders",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"folders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Http-Method-Override",
+						"value": "PUT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "heading",
+							"value": "Updated heading value 1",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Updated text value 1",
+							"type": "text"
+						},
+						{
+							"key": "private",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "fid",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://notesapi.ddev/api/notes/3",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"notes",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Folder",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Http-Method-Override",
+						"value": "PUT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "heading",
+							"value": "Updated heading value 1",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Updated text value 1",
+							"type": "text"
+						},
+						{
+							"key": "private",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "fid",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://notesapi.ddev/api/folders/1",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"folders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Note",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Http-Method-Override",
+						"value": "PUT",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://notesapi.ddev/api/notes/1",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"notes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Folder",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "user1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user1",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Http-Method-Override",
+						"value": "PUT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "heading",
+							"value": "Updated heading value 1",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "Updated text value 1",
+							"type": "text"
+						},
+						{
+							"key": "private",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "fid",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "uid",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://notesapi.ddev/api/folders/1",
+					"protocol": "http",
+					"host": [
+						"notesapi",
+						"ddev"
+					],
+					"path": [
+						"api",
+						"folders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
